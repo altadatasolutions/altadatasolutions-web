@@ -1,0 +1,105 @@
+{
+ "_instrucciones": "Edita este archivo para cambiar el catálogo. precio y precioAntes en dólares (número) o null para 'Precio a consultar'. promo: true lo muestra en Promociones. imagen: ruta a una foto (ej. img/productos/laptop-hp.jpg) o null para usar el ícono.",
+ "whatsapp": "50764824577",
+ "productos": [
+  {
+   "nombre": "Laptop 14 pulgadas",
+   "detalle": "16 GB de RAM, disco SSD de 512 GB",
+   "categoria": "Laptops",
+   "icono": "laptop",
+   "imagen": null,
+   "precio": null,
+   "precioAntes": null,
+   "promo": true,
+   "etiqueta": "Promoción"
+  },
+  {
+   "nombre": "Laptop 15,6 pulgadas",
+   "detalle": "8 GB de RAM, disco SSD de 256 GB",
+   "categoria": "Laptops",
+   "icono": "laptop",
+   "imagen": null,
+   "precio": null,
+   "precioAntes": null,
+   "promo": false,
+   "etiqueta": null
+  },
+  {
+   "nombre": "Monitor de 24 pulgadas",
+   "detalle": "Full HD, entradas HDMI y VGA",
+   "categoria": "Monitores",
+   "icono": "monitor",
+   "imagen": null,
+   "precio": null,
+   "precioAntes": null,
+   "promo": false,
+   "etiqueta": null
+  },
+  {
+   "nombre": "Teclado y mouse inalámbricos",
+   "detalle": "Combo en español, receptor USB",
+   "categoria": "Accesorios",
+   "icono": "keyboard",
+   "imagen": null,
+   "precio": null,
+   "precioAntes": null,
+   "promo": true,
+   "etiqueta": "Promoción"
+  },
+  {
+   "nombre": "Mouse óptico USB",
+   "detalle": "Para oficina y escuela",
+   "categoria": "Accesorios",
+   "icono": "mouse",
+   "imagen": null,
+   "precio": null,
+   "precioAntes": null,
+   "promo": false,
+   "etiqueta": null
+  },
+  {
+   "nombre": "Disco SSD de 1 TB",
+   "detalle": "Instalación y copia de archivos disponibles",
+   "categoria": "Partes",
+   "icono": "hard-drive",
+   "imagen": null,
+   "precio": null,
+   "precioAntes": null,
+   "promo": true,
+   "etiqueta": "Instalación incluida"
+  },
+  {
+   "nombre": "Memoria RAM de 16 GB",
+   "detalle": "DDR4 para laptop o escritorio",
+   "categoria": "Partes",
+   "icono": "memory-stick",
+   "imagen": null,
+   "precio": null,
+   "precioAntes": null,
+   "promo": false,
+   "etiqueta": null
+  },
+  {
+   "nombre": "Impresora multifuncional",
+   "detalle": "Imprime, copia y escanea",
+   "categoria": "Accesorios",
+   "icono": "printer",
+   "imagen": null,
+   "precio": null,
+   "precioAntes": null,
+   "promo": false,
+   "etiqueta": null
+  },
+  {
+   "nombre": "Audífonos con micrófono",
+   "detalle": "Para clases y reuniones en línea",
+   "categoria": "Accesorios",
+   "icono": "headphones",
+   "imagen": null,
+   "precio": null,
+   "precioAntes": null,
+   "promo": false,
+   "etiqueta": null
+  }
+ ]
+}

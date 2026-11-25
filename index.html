@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="es" data-type="product" data-radius="soft" data-ground="sand" data-buttons="block" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Altadata Solutions: reparación de computadoras en Dolega, Chiriquí</title>
+<meta name="description" content="Reparación, mantenimiento y venta de computadoras, y creación de páginas web, para hogares, escuelas y pequeñas empresas de Chiriquí.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Altadata Solutions: reparación de computadoras en Dolega, Chiriquí">
+<meta property="og:description" content="Reparación, mantenimiento y venta de computadoras en Chiriquí, con asistencia remota o en sitio.">
+<meta property="og:image" content="share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<meta name="theme-color" content="#f7f3ee">
+<!-- <link rel="canonical" href="https://[dominio del cliente]/"> -->
+<meta name="site-kind" content="tech">
+<meta name="page-type" content="product">
+<link rel="preload" href="fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Geist"; font-style: normal; font-display: swap; font-weight: 100 900; src: url(fonts/geist-latin-wght-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Geist"; font-style: normal; font-display: swap; font-weight: 100 900; src: url(fonts/geist-latin-ext-wght-normal.woff2) format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Geist Mono"; font-style: normal; font-display: swap; font-weight: 400; src: url(fonts/geist-mono-latin-400-normal.woff2) format("woff2"); }
+@font-face { font-family: "Geist Mono"; font-style: normal; font-display: swap; font-weight: 500; src: url(fonts/geist-mono-latin-500-normal.woff2) format("woff2"); }
+</style>
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #f7f3ee; --p-surface: #efe6db; --p-ink: #2a1a14; --p-muted: #6b5a50;
+  --p-accent: #d95f10; --p-accent-ink: #ffffff; --p-action: #c63a1f; --p-action-ink: #ffffff;
+  --p-inv-bg: #2a1a14; --p-inv-surface: #36241c; --p-inv-ink: #f7f1ea; --p-inv-muted: #bba99c;
+  --p-inv-accent: #f39a32; --p-inv-accent-ink: #2a1a14; --p-inv-action: #c63a1f; --p-inv-action-ink: #ffffff;
+  --font-display: "Geist", system-ui, sans-serif;
+  --font-text: "Geist", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display-weight: 500;
+  --display-tracking: -0.035em;
+  --display-tracking-xl: -0.045em;
+}
+</style>
+<link rel="stylesheet" href="assets/ui/base.css">
+<link rel="stylesheet" href="assets/ui/checklist/fragment.css">
+<link rel="stylesheet" href="assets/ui/notify/fragment.css">
+<link rel="stylesheet" href="assets/ui/toggles/fragment.css">
+<link rel="stylesheet" href="assets/ui/search/fragment.css">
+<link rel="stylesheet" href="assets/ui/terminal-run/fragment.css">
+<link rel="stylesheet" href="assets/ui/stat/fragment.css">
+<link rel="stylesheet" href="assets/ui/doc/fragment.css">
+<link rel="stylesheet" href="assets/diagrams/diagram.css">
+<link rel="stylesheet" href="assets/moments/pinned-chapters/moment.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script src="assets/backgrounds/backgrounds.js"></script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/pinned-chapters/moment.js">
+<style>
+  /* the hero window: a remote-support conversation (inside the visual) */
+  .d-win { background: #fbfbfa; color: #1d1c17; border-radius: 12px; overflow: hidden; font: 400 14px/1.4 var(--font-text); box-shadow: 0 0 0 1px rgb(38 37 30 / .1), 0 30px 70px -30px rgb(38 37 30 / .45); }
+  .d-win__bar { display: flex; align-items: center; gap: 10px; height: 40px; padding: 0 14px; border-bottom: 1px solid rgb(38 37 30 / .08); font-size: 13px; color: #5a5850; }
+  .d-win__bar b { color: #2a1a14; font-weight: 500; } .d-win__bar .sp { flex: 1; }
+  .d-win__dots { display: flex; gap: 6px; } .d-win__dots i { width: 10px; height: 10px; border-radius: 50%; background: #d6d5d0; }
+  .d-win__body { display: grid; grid-template-columns: 250px 1fr; min-height: 420px; }
+  .inbox { border-right: 1px solid rgb(38 37 30 / .08); padding: 10px; display: grid; align-content: start; gap: 2px; }
+  .inbox .q { height: 34px; margin-bottom: 6px; border-radius: 9px; background: rgb(38 37 30 / .05); display: flex; align-items: center; padding: 0 10px; color: #6b695f; font-size: 13px; }
+  .inbox .t { display: grid; grid-template-columns: 30px 1fr auto; gap: 1px 10px; padding: 9px 8px; border-radius: 9px; font-size: 13px; }
+  .inbox .t.is-on { background: rgb(154 41 25 / .07); }
+  .inbox .t i { grid-row: 1 / span 2; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font: 500 13px/1 var(--font-text); font-style: normal; color: #2a1a14; }
+  .inbox .t b { font-weight: 500; color: #2a1a14; } .inbox .t time { color: #6b695f; font-size: 13px; }
+  .inbox .t span { grid-column: 2 / -1; color: #5a5850; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .convo { display: grid; min-width: 0; align-content: start; }
+  .d-chat { display: grid; gap: 8px; align-content: start; padding: 14px 18px; font-size: 14px; }
+  .d-msg { max-width: 78%; padding: 10px 14px; border-radius: 16px; line-height: 1.45; }
+  .d-msg--me { justify-self: end; background: #2a1a14; color: #f4f3ef; border-bottom-right-radius: 6px; }
+  .d-msg--bot { max-width: 86%; background: rgb(154 41 25 / .07); color: #1d1c17; border-bottom-left-radius: 6px; }
+  .d-msg small { display: inline; margin-left: 8px; font-size: 13px; opacity: .65; white-space: nowrap; }
+  .d-tool { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #5a5850; }
+  .d-tool::before { content: ""; width: 14px; height: 14px; border-radius: 50%; border: 2px solid #d95f10; border-right-color: transparent; }
+  .acts { display: flex; gap: 8px; } .acts span { height: 30px; padding: 0 12px; border-radius: 6px; display: inline-flex; align-items: center; font-size: 13px; font-weight: 500; background: #c63a1f; color: #fff; }
+  .acts span + span { background: rgb(38 37 30 / .07); color: #2a1a14; }
+  @media (max-width: 639px) { .d-win__body { grid-template-columns: 1fr; } .inbox { display: none; } .d-win__bar .sp ~ span { display: none; } }
+
+  .hero--centred .hero__lead { color: var(--ink); }
+  .hero--centred h1 { max-width: 23ch; }
+  @media (max-width: 639px) { .hero--centred h1 { font-size: 34px; } }
+  @media (max-width: 639px) { .hero__window .d-tool, .hero__window .d-msg small { display: none; } }
+  #servicios .panel { --p-h: 270px; }
+  @media (max-width: 639px) { #proceso { min-height: calc(2 * 100lvh); } .hero--centred .pill .muted { display: none; } }
+  @media (max-width: 639px) { #servicios .panel { --p-h: 165px; } }
+  /* the brand band's frame holds the backup diagram */
+  #empresas .frame { aspect-ratio: 5 / 4; }
+  .menu-mark { position: relative; }
+  .nav__logo img.brand-logo { display: block; height: 44px; width: auto; }
+  .nav__logo img.brand-logo--foot { height: 60px; }
+  .hero-mark { display: inline-block; height: .8em; width: auto; vertical-align: -0.06em; margin-right: .1em; }
+  #nosotros .rows { margin-top: var(--s-6); }
+  #nosotros .rows li p { margin: 0; }
+  .about-frame { height: 500px; position: relative; background: var(--surface); }
+  .frame > .brand-mark, .panel > .brand-mark { position: absolute; z-index: 2; inset: 14%; background: url(img/altadata-mark.png) center / contain no-repeat; }
+  .about-line { margin-top: var(--s-5); font: var(--display-weight) var(--t-h3)/1.2 var(--font-display); letter-spacing: var(--display-tracking); }
+  @media (max-width: 639px) { .nav__logo img.brand-logo { height: 36px; } .about-frame { height: 460px; } }
+  .chip-new { display: inline-block; margin-left: var(--s-2); padding: 2px 8px; border-radius: 99px; background: var(--p-action); color: #fff; font-size: 13px; font-weight: 500; vertical-align: 2px; }
+  .web-rows { margin-top: var(--s-6); }
+  .web-frame { position: relative; aspect-ratio: 5 / 4; overflow: hidden; }
+  .web-frame > .web-win { position: absolute; z-index: 2; left: 48px; top: 48px; width: 720px; }
+  .web-win .d-win__body { grid-template-columns: 200px 1fr; min-height: 380px; }
+  .edit { display: grid; align-content: start; gap: 6px; padding: 16px 18px; font-size: 13px; }
+  .edit label { color: #6b5a50; margin-top: 6px; }
+  .edit .fld { border: 1px solid rgb(42 26 20 / .14); border-radius: 8px; padding: 9px 12px; background: #fff; color: #2a1a14; font-size: 14px; }
+  .edit .fld--on { border-color: #c63a1f; box-shadow: 0 0 0 3px rgb(198 58 31 / .12); }
+  .edit .fld--tall { min-height: 58px; }
+  .edit .fld--img { display: flex; align-items: center; gap: 10px; color: #6b5a50; }
+  .edit .fld--img span { width: 36px; height: 26px; border-radius: 4px; background: linear-gradient(135deg, #f39a32, #be4c22); }
+  .edit .acts { margin-top: 12px; }
+  @media (max-width: 1023px) { .web-frame { margin-top: var(--s-7); } }
+  @media (min-width: 640px) and (max-width: 1023px) { #web { --h: 2 } }
+  @media (max-width: 639px) { .web-frame { aspect-ratio: 4 / 5; } .web-frame > .web-win { left: 16px; top: 16px; width: 560px; } .web-win .d-win__body { grid-template-columns: 1fr; } .web-win .inbox { display: none; } }
+  /* logo loader (Nosotros): draw -> fill -> hold -> reset, scoped to [data-logo-loader] */
+  .frame > .ll-svg { position: absolute; z-index: 2; inset: 12% 14% 16%; width: 72%; height: 72%; margin: auto; overflow: visible; }
+  .ll-fill polygon { stroke-width: 3; }
+  .frame > .ll-ctrl { position: absolute; z-index: 3; right: var(--s-4); bottom: var(--s-4); display: flex; gap: var(--s-2); }
+  .ll-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgb(42 26 20 / .16); background: rgb(247 243 238 / .9); color: var(--p-ink); display: grid; place-items: center; cursor: pointer; padding: 0; }
+  .ll-btn:hover { background: #fff; }
+  .ll-btn:focus-visible { outline: 2px solid var(--p-action); outline-offset: 2px; }
+  .ll-btn:disabled { opacity: .45; cursor: default; }
+  .ll-btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .ll-btn .ll-i-play { display: none; fill: currentColor; stroke: none; }
+  .ll.is-paused .ll-i-pause { display: none; } .ll.is-paused .ll-i-play { display: block; }
+  /* client-sites reel: sticky stage, Three.js canvas over warm paper */
+  main > section.reel { position: relative; height: 200vh; padding: 0; margin: 0; background: var(--p-bg); }
+  .reel__sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden;
+    background:
+      radial-gradient(circle at 1px 1px, rgb(42 26 20 / .07) .6px, transparent 1px) 0 0 / 6px 6px,
+      radial-gradient(70% 60% at 50% 42%, rgb(255 255 255 / .55), transparent 70%),
+      radial-gradient(50% 50% at 85% 90%, rgb(243 154 50 / .08), transparent 70%),
+      var(--p-bg); }
+  .reel__stage { position: absolute; inset: 0; display: grid; place-items: center; }
+  .reel__title { position: absolute; margin: 0; text-align: center; color: var(--p-ink); font: 600 clamp(56px, 13vw, 210px)/.88 var(--font-display); letter-spacing: -0.055em; pointer-events: none; user-select: none; }
+  .reel__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: grab; touch-action: pan-y; outline: none; }
+  .reel__canvas:active { cursor: grabbing; }
+  .reel__canvas:focus-visible { box-shadow: inset 0 0 0 3px var(--p-action); }
+  .reel__hint { position: absolute; left: 0; right: 0; bottom: max(24px, env(safe-area-inset-bottom)); margin: 0; text-align: center; font-size: 14px; color: var(--p-muted); letter-spacing: .01em; }
+  .reel__fallback { display: none; }
+  @media (max-width: 639px) { .reel__hint { bottom: 96px; } .reel__stage { place-items: start center; } .reel__title { position: relative; margin-top: 15vh; font-size: 18vw; } }
+  .reel--fallback { height: auto; }
+  .reel--fallback .reel__sticky { position: relative; height: auto; padding: var(--s-9) var(--s-5); }
+  .reel--fallback .reel__stage { position: relative; display: block; }
+  .reel--fallback .reel__title { position: relative; margin-bottom: var(--s-7); }
+  .reel--fallback .reel__hint { display: none; }
+  .reel--fallback .reel__fallback { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: var(--s-5); max-width: 1280px; margin: 0 auto; padding: 0; list-style: none; }
+  .reel__fallback a { display: grid; gap: var(--s-3); color: var(--p-ink); }
+  .reel__fallback img { width: 100%; height: auto; border-radius: 14px; }
+  .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  /* FAQ as an accordion: the answer opens when its question is pressed (the kit's .faq forces every answer open, so this uses its own class) */
+  .acc > details { padding: var(--s-5) 0; border-bottom: 1px solid var(--line); }
+  .acc > details:first-child { padding-top: 0; }
+  .acc summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); min-height: 44px; }
+  .acc summary::-webkit-details-marker { display: none; }
+  .acc summary h3 { margin: 0; font: 500 var(--t-lead)/1.4 var(--font-text); letter-spacing: 0; }
+  .acc details > p { margin: var(--s-3) 0 0; max-width: 64ch; color: var(--ink); }
+  .acc summary:focus-visible { outline: 2px solid var(--p-action); outline-offset: 4px; border-radius: 4px; }
+  .faq__ico { flex: none; width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; transition: transform .25s ease; }
+  .acc details[open] .faq__ico { transform: rotate(45deg); }
+  @media (max-width: 639px) { .acc > details { padding: var(--s-4) 0; } }
+  @media (prefers-reduced-motion: reduce) { .faq__ico { transition: none; } }
+  .wa-link { display: inline-flex; align-items: center; gap: var(--s-2); }
+  .side-visual { height: 260px; margin-top: var(--s-5); }
+  @media (max-width: 639px) { .side-visual { height: 220px; } .hero__window .acts, .hero__window .d-win__bar { display: none; } }
+  footer.closing { height: auto; min-height: 0; }
+  footer.closing .closing__cta { padding-bottom: var(--s-8); }
+  #empresas .rows { margin-top: var(--s-6); }
+  #contacto .form { background: var(--surface); padding: var(--s-7); border-radius: var(--r-lg); }
+  @media (max-width: 639px) { #contacto .form { padding: var(--s-5); } }
+</style>
+</head>
+<body>
+<!-- type: product (site-kind tech: reparación y venta de computadoras, consultoría TI)
+     deal: hero centred (re-dealt with --has ui: no photographs could be fetched in this build), nav nav-mega,
+     close close-word, footer footer-dark, rhythm dark-band (#empresas; re-dealt from brand-band: white on the blue accent reads 6.2:1, under 7:1), buttons block, mark stack,
+     palette: the client's own logo colours (brand red #9a2919 for actions, orange #d95f10 / #f39a32 accents, warm paper ground), type geist,
+     radius soft, ground sky, effect gradient-mesh (hero window), card ground painterly-landscape
+     moments: pinned-chapters (#proceso: diagnóstico, reparación, entrega) -->
+
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Ir al contenido</a>
+    <a class="nav__logo" href="#top"><img class="brand-logo" src="img/altadata-logo.png" alt="Altadata Solutions" width="143" height="48"></a>
+    <nav class="nav__links" aria-label="Principal">
+      <div class="nav__item">
+        <a class="nav__link" href="#servicios">Servicios <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <div class="menu-col span-3">
+              <p class="t-label">Para tu equipo</p>
+              <a href="#servicios">Reparación<span>Hardware y software</span></a>
+              <a href="#servicios">Venta de equipos<span>Computadoras y accesorios</span></a>
+              <a href="#proceso">Diagnóstico<span>Qué tiene y cuánto cuesta</span></a>
+            </div>
+            <div class="menu-col span-3">
+              <p class="t-label">Para tu negocio</p>
+              <a href="#servicios">Consultoría<span>Respaldo, licencias, seguridad</span></a>
+              <a href="#empresas">Soporte a empresas<span>Remoto o en sitio</span></a>
+              <a href="#web">Páginas web<span>Creación y rediseño</span></a>
+            </div>
+            <a class="menu-card span-3 start-10" href="#proceso">
+              <div class="panel menu-mark"><div class="brand-mark" aria-hidden="true"></div></div>
+              <span class="t-card">Informe de cada equipo</span>
+              <span class="t-small muted">Qué encontramos y qué hicimos</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="#proceso">Proceso</a></div>
+      <div class="nav__item"><a class="nav__link" href="#faq">Preguntas</a></div>
+      <div class="nav__item"><a class="nav__link" href="#nosotros">Nosotros</a></div>
+      <div class="nav__item"><a class="nav__link" href="#empresas">Clientes</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="#contacto">Pedir un diagnóstico</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menú">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--centred" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__c">
+        <a class="pill" href="#web"><span>Nuevo: páginas web administrables</span><span class="muted">Cambia tus textos sin programar</span></a>
+        <h1 id="hero-h" aria-label="Tecnología con propósito. Soluciones que trascienden."><img class="hero-mark" src="img/altadata-mark.png" alt="" width="64" height="70"> Tecnología con propósito. Soluciones que trascienden.</h1>
+        <p class="hero__lead">Mantenimiento, optimización y venta de soluciones tecnológicas para personas, empresas y organizaciones.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="#contacto">Pedir un diagnóstico<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#servicios">Ver los servicios</a></div>
+      </div>
+      <div class="hero__window" data-fx="gradient-mesh" data-fx-seed="7" role="img" aria-label="Un técnico de Altadata responde a una oficina cuya laptop se apaga sola">
+        <div class="ly-piece d-win" aria-hidden="true">
+          <div class="d-win__bar"><span class="d-win__dots"><i></i><i></i><i></i></span><span><b>Oficina contable</b> · Laptop de recepción</span><span class="sp"></span><span>Asistencia remota</span></div>
+          <div class="d-win__body">
+            <div class="inbox">
+              <div class="q">Buscar equipo</div>
+              <div class="t is-on"><i style="background:#c9d6f6">OC</i><b>Oficina contable</b><time>10:42</time><span>La laptop se apaga sola después de…</span></div>
+              <div class="t"><i style="background:#e6d9b8">E3</i><b>Escuela, aula 3</b><time>10:15</time><span>Cuatro equipos sin conexión a la red</span></div>
+              <div class="t"><i style="background:#cfe0cf">MP</i><b>Mini súper</b><time>09:50</time><span>Respaldo de la caja · completado</span></div>
+            </div>
+            <div class="convo">
+              <div class="d-chat" data-ly-steps="900">
+                <div class="d-msg d-msg--me">La laptop de recepción se apaga sola después de 20 minutos.</div>
+                <div class="d-tool" data-step>Leyendo la temperatura y el registro de eventos</div>
+                <div class="d-msg d-msg--bot" data-step>La CPU llega a 96 °C: el ventilador está obstruido. Te propongo limpieza interna y pasta térmica nueva.<small>Técnico · Altadata</small></div>
+                <div class="acts" data-step><span>Aceptar</span><span>Agendar visita</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section g2" id="servicios" aria-labelledby="servicios-h">
+    <div class="wrap">
+      <div class="group">
+        <div class="section-head">
+          <h2 id="servicios-h">Nuestros servicios para tus equipos. <span class="muted">De una laptop a la red de un laboratorio.</span></h2>
+        </div>
+        <div class="grid">
+          <article class="card card--row card--open span-6">
+            <h3>Soporte técnico y mantenimiento</h3>
+            <p>Reparación de hardware y software, diagnóstico especializado, limpieza interna y optimización del sistema.</p>
+            <div class="panel" data-fx="painterly-landscape" data-fx-seed="21" data-fx-params='{"drift":0}'>
+              <div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:400px;--ax:max(24px, 50% - 200px);--ay:calc(100% - 180px);--ay-sm:calc(100% - 180px)" data-ui-loop>
+                <div class="ui ui-panel ui-checks" data-ui="checklist">
+                  <div class="ui-checks__head">
+                    <div class="ui-title">Mantenimiento · Laptop</div>
+                    <span class="ui-spacer"></span>
+                    <div class="ui-meta" data-checks-count>2 de 5</div>
+                  </div>
+                  <div class="ui-checks__bar"><i data-checks-bar style="--k:0.4"></i></div>
+                  <ul class="ui-checks__list">
+                    <li class="ui-check is-done"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Copia de los archivos</span></li>
+                    <li class="ui-check is-done"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Limpieza del ventilador</span></li>
+                    <li class="ui-check"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Pasta térmica nueva</span></li>
+                    <li class="ui-check"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Actualizar el sistema</span></li>
+                    <li class="ui-check"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Prueba de 30 minutos</span></li>
+                  </ul>
+                </div>
+              </div></div>
+            </div>
+          </article>
+          <article class="card card--row card--open span-6">
+            <h3>Venta de equipos y accesorios</h3>
+            <p>Computadoras nuevas, periféricos, partes y accesorios, con asesoría para tu compra.</p>
+            <!-- Oculto hasta tener el inventario: <p><a class="link" href="catalogo.html">Ver productos y promociones</a></p> -->
+            <div class="panel" data-fx="painterly-landscape" data-fx-seed="34" data-fx-params='{"drift":0}'>
+              <div class="stage stage--fade-b"><div class="at-rise fit to-edge" style="--fit-max:400px;--ax:max(24px, 50% - 200px);--ay:56px;--ay-sm:56px">
+                <div class="ui ui-panel ui-search" data-ui="search">
+                  <div class="ui-search__field">
+                    <svg class="ui-icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>
+                    <span class="ui-search__q"><span data-search-q>laptop 16 GB</span><i class="ui-search__caret"></i></span>
+                  </div>
+                  <div class="ui-search__group">Equipos en tienda</div>
+                  <ul class="ui-search__list" data-search-list>
+                    <li class="ui-search__row is-sel"><span class="ui-search__ico"><svg class="ui-icon" viewBox="0 0 16 16"><path d="M3 3.5h10v7H3zM1.5 12.5h13"/></svg></span><span class="ui-search__t"><b>Laptop</b> 14 pulgadas, <b>16 GB</b>, SSD</span><span class="ui-search__m">Nueva</span></li>
+                    <li class="ui-search__row"><span class="ui-search__ico"><svg class="ui-icon" viewBox="0 0 16 16"><path d="M3 3.5h10v7H3zM1.5 12.5h13"/></svg></span><span class="ui-search__t"><b>Laptop</b> 15 pulgadas, <b>16 GB</b></span><span class="ui-search__m">Nueva</span></li>
+                    <li class="ui-search__row"><span class="ui-search__ico"><svg class="ui-icon" viewBox="0 0 16 16"><path d="M2.5 5h11v6h-11zM5 5v6M8 5v6M11 5v6"/></svg></span><span class="ui-search__t">Memoria <b>16 GB</b> para <b>laptop</b></span><span class="ui-search__m">Parte</span></li>
+                  </ul>
+                </div>
+              </div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card card--row card--open span-6">
+          <h3>Consultoría de equipos y licencias</h3>
+          <p>Evaluación de tu infraestructura TI, actualización de equipos y licencias, seguridad de datos y respaldo.</p>
+          <div class="panel" data-fx="painterly-landscape" data-fx-seed="47" data-fx-params='{"drift":0}'>
+            <div class="stage stage--fade-b"><div class="at-right to-edge" style="--ax:32px;--ay:56px">
+              <div class="ui ui-panel ui-toggles" data-ui="toggles">
+                <div class="ui-head">
+                  <svg class="ui-icon ui-toggles__ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.8 13 4v3.6c0 3-2.1 5.4-5 6.6-2.9-1.2-5-3.6-5-6.6V4z"/><path d="m5.8 8 1.6 1.6 3-3.2"/></svg>
+                  <div class="ui-title">Seguridad de la oficina</div>
+                  <span class="ui-spacer"></span>
+                  <div class="ui-meta" data-tg-count>3 de 4 activos</div>
+                </div>
+                <ul class="ui-toggles__list">
+                  <li class="ui-tg">
+                    <span class="ui-tg__text"><span class="ui-tg__label">Respaldo diario</span><span class="ui-tg__sub">Disco externo y nube, a las 18:00</span></span>
+                    <button class="ui-switch is-on" type="button" role="switch" aria-checked="true" aria-label="Respaldo diario" tabindex="-1"><i></i></button>
+                  </li>
+                  <li class="ui-tg">
+                    <span class="ui-tg__text"><span class="ui-tg__label">Antivirus con licencia</span><span class="ui-tg__sub">En los 6 equipos</span></span>
+                    <button class="ui-switch is-on" type="button" role="switch" aria-checked="true" aria-label="Antivirus con licencia" tabindex="-1"><i></i></button>
+                  </li>
+                  <li class="ui-tg">
+                    <span class="ui-tg__text"><span class="ui-tg__label">Actualizaciones automáticas</span><span class="ui-tg__sub">Fuera del horario de trabajo</span></span>
+                    <button class="ui-switch is-on" type="button" role="switch" aria-checked="true" aria-label="Actualizaciones automáticas" tabindex="-1"><i></i></button>
+                  </li>
+                  <li class="ui-tg">
+                    <span class="ui-tg__text"><span class="ui-tg__label">Red de invitados aparte</span><span class="ui-tg__sub">Pendiente de configurar</span></span>
+                    <button class="ui-switch" type="button" role="switch" aria-checked="false" aria-label="Red de invitados aparte" tabindex="-1"><i></i></button>
+                  </li>
+                </ul>
+              </div>
+            </div></div>
+          </div>
+        </article>
+        <article class="card card--row card--open span-6">
+          <h3>Soporte técnico para empresas</h3>
+          <p>Mantenimiento de equipos, automatización de procesos básicos y asistencia remota y presencial.</p>
+          <div class="panel" data-fx="painterly-landscape" data-fx-seed="58" data-fx-params='{"drift":0}'>
+            <div class="dg" data-diagram='{"layout":"hub","alt":"Altadata atiende las computadoras, la impresora, el router y el respaldo de una oficina.","center":{"label":"Altadata","icon":"ui:users"},"spokes":[{"label":"Computadoras","icon":"ui:monitor"},{"label":"Impresora","icon":"ui:file-text"},{"label":"Router","icon":"ui:globe"},{"label":"Respaldo","icon":"ui:database"},{"label":"Celulares","icon":"ui:smartphone"}]}'></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="web" style="--hm: 2" aria-labelledby="web-h">
+    <div class="wrap">
+      <div class="grid grid--top fill">
+        <div class="span-5">
+          <h2 id="web-h">Creación y rediseño de páginas web</h2>
+          <p class="t-lead">Hacemos el sitio de tu negocio desde cero o renovamos el que ya tienes, listo para verse bien en el celular.</p>
+          <ul class="rows web-rows">
+            <li><span class="rows__name">Páginas estáticas administrables <span class="chip-new">Nuevo</span></span><p>Cambias textos, fotos y precios tú mismo, sin tocar código.</p></li>
+            <li><span class="rows__name">Páginas dinámicas</span><p>Con base de datos, formularios, inventario o acceso de usuarios.</p></li>
+            <li><span class="rows__name">Landing pages y portafolios</span><p>Una página para vender un servicio o mostrar tu trabajo.</p></li>
+            <li><span class="rows__name">Rediseño y más</span><p>Renovamos sitios lentos o anticuados y los dejamos publicados.</p></li>
+          </ul>
+        </div>
+        <div class="frame frame--lit span-6 start-7 web-frame" role="img" aria-label="El panel de una página administrable: el dueño cambia el título de su página de inicio y publica el cambio">
+          <div class="ly-piece d-win web-win" aria-hidden="true">
+            <div class="d-win__bar"><span class="d-win__dots"><i></i><i></i><i></i></span><span><b>Panel de tu sitio</b> · Página de inicio</span><span class="sp"></span><span>Guardado</span></div>
+            <div class="d-win__body">
+              <div class="inbox">
+                <div class="q">Páginas</div>
+                <div class="t is-on"><i style="background:#f6d3b0">In</i><b>Inicio</b><time>hoy</time><span>Editando el título</span></div>
+                <div class="t"><i style="background:#ead9c8">Se</i><b>Servicios</b><time>lun</time><span>5 secciones</span></div>
+                <div class="t"><i style="background:#e8d0c6">Co</i><b>Contacto</b><time>vie</time><span>Formulario activo</span></div>
+              </div>
+              <div class="edit">
+                <label>Título</label><div class="fld fld--on">Café de altura, tostado en Boquete</div>
+                <label>Texto</label><div class="fld fld--tall">Pedidos por WhatsApp de lunes a sábado. Envíos a todo Chiriquí.</div>
+                <label>Foto principal</label><div class="fld fld--img"><span></span>portada-cafe.jpg</div>
+                <div class="acts"><span>Publicar cambios</span><span>Vista previa</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reel" id="sitios" style="--h: 2; --hm: 2" data-reel aria-labelledby="sitios-h">
+    <script type="application/json">[{"name": "Cámara de Boquete", "category": "Gremio empresarial", "description": "Sitio de la Cámara de Turismo, Comercio, Industria y Agricultura de Boquete, con eventos, noticias y acceso para socios.", "cover": "img/sitios/camaraboquete.jpg", "url": "https://camaraboquete.org"}, {"name": "Coffee Estate Inn", "category": "Hotel de montaña", "description": "Sitio del hotel Coffee Estate Inn en Boquete, con habitaciones, experiencias y reservas en línea.", "cover": "img/sitios/coffee-estate-inn.jpg", "url": "https://limegreen-mallard-688584.hostingersite.com/"}, {"name": "Rancho Nuovo Mundo", "category": "Turismo rural", "description": "Sitio del Rancho Nuovo Mundo en Boquete, con actividades de naturaleza y cultura y reservas por WhatsApp.", "cover": "img/sitios/nuovomundo.jpg", "url": "https://nuovomundo.com"}]</script>
+    <div class="reel__sticky">
+      <div class="reel__stage">
+        <h2 class="reel__title" id="sitios-h">Sitios web<br>de clientes</h2>
+      </div>
+      <p class="reel__hint" aria-hidden="true">Desplázate o arrastra para explorar</p>
+      <p class="visually-hidden" aria-live="polite" data-reel-desc></p>
+      <ul class="reel__fallback" aria-label="Sitios web de clientes"><li><a href="https://camaraboquete.org" rel="noopener"><img src="img/sitios/camaraboquete.jpg" alt="Portada del sitio web de Cámara de Boquete" loading="lazy" width="1600" height="1060"><span>Cámara de Boquete</span></a></li><li><a href="https://limegreen-mallard-688584.hostingersite.com/" rel="noopener"><img src="img/sitios/coffee-estate-inn.jpg" alt="Portada del sitio web de Coffee Estate Inn" loading="lazy" width="1600" height="1060"><span>Coffee Estate Inn</span></a></li><li><a href="https://nuovomundo.com" rel="noopener"><img src="img/sitios/nuovomundo.jpg" alt="Portada del sitio web de Rancho Nuovo Mundo" loading="lazy" width="1600" height="1060"><span>Rancho Nuovo Mundo</span></a></li></ul>
+    </div>
+  </section>
+
+  <section class="section" id="proceso" style="--h: 2; --hm: 2" data-moment="pinned-chapters" aria-labelledby="proceso-h">
+    <div class="wrap mo-pc__grid">
+      <div class="mo-pc__text">
+        <h2 id="proceso-h">Así trabajamos con tu equipo</h2>
+        <ol class="mo-pc__steps">
+          <li class="mo-pc__step">
+            <h3>Revisamos el equipo</h3>
+            <p>Probamos disco, memoria y temperatura, y te decimos qué falla antes de tocar nada.</p>
+            <figure class="mo-pc__visual mo-pc__visual--lit" role="img" aria-label="Una prueba de diagnóstico revisa el disco, la memoria, la batería y la temperatura">
+              <div class="ui ui-panel ui-term" data-ui="terminal-run" data-ui-still>
+                <div class="ui-term__head">
+                  <span class="ui-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="ui-term__title">Diagnóstico</span>
+                  <span class="ui-meta">laptop de recepción</span>
+                  <span class="ui-spacer"></span>
+                </div>
+                <div class="ui-term__screen" data-term-screen>
+                  <div class="ui-term__track" data-term-track>
+                    <div class="ui-term__ln ui-term__cmd"><span class="ui-term__cwd">taller</span><span class="ui-term__sig">$</span><span class="ui-term__typed" data-term-cmd>diagnostico --completo</span></div>
+                    <div class="ui-term__ln ui-term__meter" data-term-out data-term-meter><span class="ui-term__bar" style="--p:1"><i></i></span><span class="ui-term__count" data-term-count>4 de 4 pruebas</span></div>
+                    <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">Disco</span><span class="ui-term__n">salud 81 %</span><span class="ui-term__t">12 s</span></div>
+                    <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">Memoria</span><span class="ui-term__n">8 GB sin errores</span><span class="ui-term__t">41 s</span></div>
+                    <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">Batería</span><span class="ui-term__n">74 % de su carga</span><span class="ui-term__t">6 s</span></div>
+                    <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">Temperatura</span><span class="ui-term__n">96 °C en carga</span><span class="ui-term__t">60 s</span></div>
+                    <div class="ui-term__ln ui-term__gap" data-term-out aria-hidden="true"></div>
+                    <div class="ui-term__ln ui-term__sum" data-term-out><span class="ui-term__key">Falla</span><span class="ui-term__val">ventilador obstruido</span></div>
+                    <div class="ui-term__ln ui-term__done" data-term-out data-term-done><span class="ui-term__ok"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4.5 8.3 2.4 2.4 4.6-5"/></svg></span><b>Listo</b><span class="ui-term__dim">en 2 min</span></div>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Reparamos u optimizamos el equipo</h3>
+            <p>Con tu visto bueno cambiamos piezas, limpiamos y dejamos el sistema al día.</p>
+            <figure class="mo-pc__visual mo-pc__visual--lit" role="img" aria-label="Un gráfico muestra cómo bajó el tiempo de arranque de 94 a 23 segundos tras cambiar el disco">
+              <div class="ui ui-panel ui-stat" data-ui="stat" data-from="94" data-to="23" data-suffix=" s" data-ui-still>
+                <div class="ui-stat__head">
+                  <div class="ui-stat__top">
+                    <span class="ui-stat__label">Arranque del sistema</span>
+                    <span class="ui-stat__range">Últimas 2 semanas</span>
+                  </div>
+                  <div class="ui-stat__line">
+                    <span class="ui-stat__num" data-stat-num>23 s</span>
+                    <span class="ui-chip ui-chip--plain ui-stat__delta">71 s menos</span>
+                    <span class="ui-stat__sub">tras cambiar a disco SSD</span>
+                  </div>
+                </div>
+                <div class="ui-stat__chart">
+                  <svg class="ui-stat__svg" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+                    <path class="ui-stat__grid" d="M0 30.5H400M0 60.5H400M0 90.5H400"/>
+                    <path class="ui-stat__cover" fill-rule="evenodd" d=""/>
+                    <g class="ui-stat__bars"><rect rx="3" x="0.00" y="16" width="21.14" height="104"/><rect rx="3" x="29.14" y="19" width="21.14" height="101"/><rect rx="3" x="58.29" y="17" width="21.14" height="103"/><rect rx="3" x="87.43" y="21" width="21.14" height="99"/><rect rx="3" x="116.57" y="20" width="21.14" height="100"/><rect rx="3" x="145.72" y="23" width="21.14" height="97"/><rect rx="3" x="174.86" y="22" width="21.14" height="98"/><rect rx="3" x="204.00" y="25" width="21.14" height="95"/><rect rx="3" x="233.14" y="24" width="21.14" height="96"/><rect rx="3" x="262.29" y="50" width="21.14" height="70"/><rect rx="3" x="291.43" y="68" width="21.14" height="52"/><rect rx="3" x="320.57" y="80" width="21.14" height="40"/><rect rx="3" x="349.72" y="87" width="21.14" height="33"/><rect rx="3" x="378.86" y="90" width="21.14" height="30"/></g>
+                  </svg>
+                  <div class="ui-stat__axis" aria-hidden="true"><span>Lun 9</span><span>Lun 16</span><span>Hoy</span></div>
+                </div>
+              </div>
+            </figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Entregamos el equipo con un informe</h3>
+            <p>Sabes qué se cambió, qué se limpió y qué conviene revisar en la próxima visita.</p>
+            <figure class="mo-pc__visual mo-pc__visual--lit" role="img" aria-label="El informe de entrega de una laptop, con una nota para revisar la batería">
+              <div class="ui ui-doc" data-ui="doc" data-ui-still>
+                <article class="ui-doc__page">
+                  <div class="ui-doc__label">Informe de entrega</div>
+                  <div class="ui-doc__title">Laptop de recepción</div>
+                  <div class="ui-doc__text">Limpiamos el ventilador y cambiamos la <mark class="ui-doc__mark is-on">pasta térmica</mark>. En carga la CPU queda en 64 °C.</div>
+                  <div class="ui-doc__text">Instalamos un disco SSD de 512 GB y copiamos tus archivos sin cambios.</div>
+                  <div class="ui-doc__text">Sistema y antivirus actualizados. Respaldo configurado a las 18:00.</div>
+                </article>
+                <aside class="ui-doc__note ui-panel is-on">
+                  <div class="ui-doc__kind"><span class="ui-doc__dot"></span><span data-doc-kind>Revisar</span></div>
+                  <div class="ui-doc__msg" data-doc-msg>La batería guarda el 74 % de su carga.</div>
+                  <div class="ui-doc__where" data-doc-where>Próxima visita</div>
+                </aside>
+              </div>
+            </figure>
+          </li>
+        </ol>
+      </div>
+      <div class="mo-pc__visuals frame"></div>
+    </div>
+  </section>
+
+  <section class="section" id="nosotros" style="--hm: 2" aria-labelledby="nosotros-h">
+    <div class="wrap">
+      <div class="grid grid--top fill">
+        <div class="span-5">
+          <h2 id="nosotros-h">Sobre Altadata Solutions</h2>
+          <p class="t-lead">Una empresa de Dolega, Chiriquí, que combina innovación, confianza y excelencia técnica para impulsar el desarrollo digital de sus clientes.</p>
+          <ul class="rows">
+            <li><p>Brindar soluciones tecnológicas efectivas y sostenibles que mejoren la vida digital de nuestros clientes.</p></li>
+            <li><p>Ser un referente en innovación tecnológica aplicada, con responsabilidad, calidad y compromiso humano.</p></li>
+          </ul>
+        </div>
+        <div class="span-6 start-7 about-visual">
+          <div class="frame about-frame ll" data-logo-loader>
+            <svg class="ll-svg" viewBox="-24 -24 1474 1612" role="img" aria-label="El símbolo de Altadata Solutions: dos cheurones naranjas entrelazados que apuntan hacia arriba">
+              <g class="ll-logo">
+                <g class="ll-outline" fill="none" stroke="#9a2919" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><polygon class="ll-draw" data-delay="0" points="711,6 0,704 0,1085 711,392"/><polygon class="ll-draw" data-delay="90" points="713,5 713,391 1424,1082 1424,704"/><polygon class="ll-draw" data-delay="180" points="711,675 2,1376 189,1561 711,1059"/><polygon class="ll-draw" data-delay="270" points="712,673 712,1058 1236,1561 1421,1376"/><polygon class="ll-draw" data-delay="360" points="261,836 0,1088 0,1375 262,1117"/><polygon class="ll-draw" data-delay="450" points="1164,837 1162,1117 1424,1373 1424,1087"/></g>
+                <g class="ll-fill" stroke-width="3" stroke-linejoin="round" opacity="0"><polygon points="711,6 0,704 0,1085 711,392" fill="#be4b1f" stroke="#be4b1f"/><polygon points="713,5 713,391 1424,1082 1424,704" fill="#fe992f" stroke="#fe992f"/><polygon points="711,675 2,1376 189,1561 711,1059" fill="#de6a15" stroke="#de6a15"/><polygon points="712,673 712,1058 1236,1561 1421,1376" fill="#f48927" stroke="#f48927"/><polygon points="261,836 0,1088 0,1375 262,1117" fill="#d75c0c" stroke="#d75c0c"/><polygon points="1164,837 1162,1117 1424,1373 1424,1087" fill="#ffa439" stroke="#ffa439"/></g>
+              </g>
+            </svg>
+            <div class="ll-ctrl">
+              <button type="button" class="ll-btn" data-ll-toggle aria-label="Pausar la animación del logo"><svg viewBox="0 0 16 16" aria-hidden="true"><path class="ll-i-pause" d="M5 3.5v9M11 3.5v9"/><path class="ll-i-play" d="M5 3.2v9.6L12.8 8z"/></svg></button>
+              <button type="button" class="ll-btn" data-ll-replay aria-label="Repetir la animación del logo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8a4.8 4.8 0 1 0 1.5-3.5M3.2 2.6v2.6h2.6"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" style="--hm: 2" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="grid grid--top fill">
+        <div class="span-5 stack-4">
+          <h2 id="faq-h">Preguntas sobre el soporte técnico</h2>
+          <p class="muted">Lo que más nos preguntan antes de traer un equipo.</p>
+          <p><a class="link" href="#contacto">Escribir al taller</a></p>
+          <div class="frame frame--lit side-visual" role="img" aria-label="Los avisos que recibe un cliente mientras reparamos su laptop">
+            <div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:400px;--ax:24px;--ay:32px;--ay-sm:24px">
+              <div class="ui ui-notify" data-ui="notify" data-ui-still>
+                <ul class="ui-notify__list" data-notify-list>
+                  <li class="ui-note"><span class="ui-note__ico"><svg class="ui-icon" viewBox="0 0 16 16"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg></span><span class="ui-note__text"><span class="ui-note__title">Equipo listo<time>ahora</time></span><span class="ui-note__body">Pasa a retirarlo al taller</span></span><span class="ui-btn ui-btn--sm ui-note__btn">Ver</span></li>
+                  <li class="ui-note"><span class="ui-note__ico"><svg class="ui-icon" viewBox="0 0 16 16"><path d="M4 2.5h5l3 3v8H4z"/><path d="M9 2.5v3h3"/></svg></span><span class="ui-note__text"><span class="ui-note__title">Precio aprobado<time>ayer</time></span><span class="ui-note__body">Limpieza y pasta térmica</span></span></li>
+                  <li class="ui-note"><span class="ui-note__ico"><svg class="ui-icon" viewBox="0 0 16 16"><path d="M8 2.5v7M5 6.5l3 3 3-3M3 12.5h10"/></svg></span><span class="ui-note__text"><span class="ui-note__title">Archivos copiados<time>ayer</time></span><span class="ui-note__body">Antes de abrir el equipo</span></span></li>
+                </ul>
+              </div>
+            </div></div>
+          </div>
+        </div>
+        <div class="acc span-6 start-7">
+          <details><summary><h3>¿Cuánto cuesta un diagnóstico?</h3><svg class="faq__ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8 3v10"/></svg></summary><p>Depende del equipo y de la falla. Te damos el precio antes de empezar y no hacemos nada sin tu visto bueno.</p></details>
+          <details><summary><h3>¿Dan soporte técnico en casa u oficina?</h3><svg class="faq__ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8 3v10"/></svg></summary><p>Sí. Atendemos en sitio en Chiriquí y también a distancia, por asistencia remota.</p></details>
+          <details><summary><h3>¿Me asesoran para comprar computadoras?</h3><svg class="faq__ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8 3v10"/></svg></summary><p>Sí. Te recomendamos el equipo según tu trabajo antes de la compra.</p></details>
+          <details><summary><h3>¿Pierdo mis archivos con la reparación?</h3><svg class="faq__ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8 3v10"/></svg></summary><p>No. Hacemos una copia de tus archivos antes de cambiar el disco o reinstalar el sistema.</p></details>
+          <details><summary><h3>¿Dan soporte técnico a instituciones educativas?</h3><svg class="faq__ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M8 3v10"/></svg></summary><p>Sí. Damos mantenimiento a laboratorios y equipos administrativos y docentes.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ground-inverse" id="empresas" aria-labelledby="empresas-h">
+    <div class="wrap">
+      <div class="grid grid--top fill">
+        <div class="span-5">
+          <h2 id="empresas-h">Clientes de Altadata</h2>
+          <p class="t-lead">Brindamos confianza y seguridad en todos nuestros servicios.</p>
+          <ul class="rows">
+            <li><span class="rows__name">Clientes individuales</span></li>
+            <li><span class="rows__name">Microempresas</span></li>
+            <li><span class="rows__name">Instituciones educativas</span></li>
+            <li><span class="rows__name">Pequeñas empresas</span></li>
+          </ul>
+        </div>
+        <div class="frame span-6 start-7">
+          <div class="dg" data-dg-still data-diagram='{"layout":"fanin","alt":"Los equipos de recepción, contabilidad, dirección y un aula se respaldan cada día en un mismo lugar, con un aviso si algo falla.","sources":[{"label":"Recepción","icon":"ui:monitor","sub":"2 equipos"},{"label":"Contabilidad","icon":"ui:monitor","sub":"3 equipos"},{"label":"Dirección","icon":"ui:monitor","sub":"1 laptop"},{"label":"Aula 3","icon":"ui:users","sub":"12 equipos"}],"target":{"label":"Respaldo","icon":"ui:database"},"then":{"label":"Aviso diario","icon":"ui:mail-check","meta":"18:00"},"motion":{"pulse":"none"}}'></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contacto" style="--hm: 2" aria-labelledby="contacto-h">
+    <div class="wrap">
+      <div class="grid grid--top fill">
+        <div class="span-5 stack-4">
+          <h2 id="contacto-h">Pide un diagnóstico</h2>
+          <p class="t-lead">Cuéntanos qué equipo es y qué le pasa. Te respondemos con los pasos y el precio.</p>
+          <address class="visit__address">Dolega, Chiriquí</address>
+          <p><a class="link" href="https://www.openstreetmap.org/search?query=Dolega%20Chiriqu%C3%AD%20Panam%C3%A1">Ver la zona</a></p>
+          <p><a class="link wa-link" href="https://wa.me/50764824577?text=Hola%2C%20quiero%20pedir%20un%20diagn%C3%B3stico" rel="noopener"><img src="assets/icons/whatsapp.svg" alt="" width="20" height="20">Escribir por WhatsApp al 6482-4577</a></p>
+          <div class="frame frame--lit side-visual" role="img" aria-label="Lo que conviene traer con el equipo al taller">
+            <div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:400px;--ax:24px;--ay:32px;--ay-sm:24px">
+              <div class="ui ui-panel ui-checks" data-ui="checklist" data-ui-still>
+                <div class="ui-checks__head">
+                  <div class="ui-title">Al traer tu equipo</div>
+                  <span class="ui-spacer"></span>
+                  <div class="ui-meta" data-checks-count>4 cosas</div>
+                </div>
+                <div class="ui-checks__bar"><i data-checks-bar style="--k:0"></i></div>
+                <ul class="ui-checks__list">
+                  <li class="ui-check"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">El cargador</span></li>
+                  <li class="ui-check"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">La contraseña de inicio</span></li>
+                  <li class="ui-check"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Qué falla y desde cuándo</span></li>
+                  <li class="ui-check"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Los archivos que no pueden perderse</span></li>
+                </ul>
+              </div>
+            </div></div>
+          </div>
+        </div>
+        <div class="span-6 start-7">
+          <form class="form" action="https://formsubmit.co/luisiglesias@altadatasolutions.com" method="post" data-endpoint="https://formsubmit.co/ajax/luisiglesias@altadatasolutions.com" data-sent="Tu pedido de diagnóstico está enviado. Te respondemos por correo." novalidate>
+            <input type="hidden" name="_subject" value="Nuevo pedido de diagnóstico desde la web">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+            <div class="field"><label for="f-name">Nombre</label>
+              <input id="f-name" name="nombre" type="text" autocomplete="name" required aria-describedby="f-name-err">
+              <p class="field__error" id="f-name-err" hidden>Escribe tu nombre o el de tu negocio.</p></div>
+            <div class="field"><label for="f-email">Correo</label>
+              <input id="f-email" name="correo" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">
+              <p class="field__error" id="f-email-err" hidden>Escribe un correo con @, como nombre@correo.com.</p></div>
+            <div class="field field--full"><label for="f-equipo">Equipo</label>
+              <input id="f-equipo" name="equipo" type="text" autocomplete="off" required aria-describedby="f-equipo-err">
+              <p class="field__error" id="f-equipo-err" hidden>Escribe qué equipo es, por ejemplo laptop o impresora.</p></div>
+            <div class="field field--full"><label for="f-lugar">Dónde te atendemos</label>
+              <select id="f-lugar" name="lugar"><option>En el taller, en Dolega</option><option>En mi casa u oficina</option><option>A distancia, por asistencia remota</option></select></div>
+            <div class="field field--full"><label for="f-falla">Qué le pasa</label>
+              <textarea id="f-falla" name="falla" autocomplete="off" required aria-describedby="f-falla-err"></textarea>
+              <p class="field__error" id="f-falla-err" hidden>Escribe en pocas palabras qué falla.</p></div>
+            <div class="btn-row"><button class="btn btn--primary" type="submit">Pedir un diagnóstico</button></div>
+            <p class="form__status" role="status" data-form-status></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta">
+      <div class="section-head--split">
+        <div><h2 id="close-h">Tu equipo, en buenas manos</h2></div>
+        <a class="btn btn--primary" href="#contacto">Pedir un diagnóstico<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><img class="brand-logo brand-logo--foot" src="img/altadata-logo-light.png" alt="Altadata Solutions" width="179" height="60"></a>
+        </div>
+        <div class="span-2 footer__col"><h3>Servicios</h3><ul><li><a href="#servicios">Reparación</a></li><li><a href="#servicios">Equipos</a></li><li><a href="#web">Páginas web</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Proceso</h3><ul><li><a href="#proceso">Diagnóstico</a></li><li><a href="#proceso">Informe</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Empresa</h3><ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#faq">Preguntas</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Contacto</h3><ul><li><a href="#contacto">Formulario</a></li><li><a href="https://wa.me/50764824577" rel="noopener">WhatsApp</a></li><li><a href="https://www.instagram.com/altadatasolutions/" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/people/Altadata-Solutions/61576147513983/" rel="noopener">Facebook</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Altadata Solutions</span>
+        <div class="socials">
+          <a href="https://www.instagram.com/altadatasolutions/" rel="noopener" aria-label="Instagram de Altadata Solutions (@altadatasolutions)"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a>
+          <a href="https://www.facebook.com/people/Altadata-Solutions/61576147513983/" rel="noopener" aria-label="Facebook de Altadata Solutions"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+          <a href="https://wa.me/50764824577" rel="noopener" aria-label="WhatsApp de Altadata Solutions"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Acciones rápidas">
+  <a class="btn btn--primary" href="#contacto">Pedir un diagnóstico</a>
+</nav>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+<script type="module" src="assets/diagrams/mount.js"></script>
+<script type="module">
+  import("./assets/reel.js").catch(() => document.querySelectorAll("[data-reel]").forEach(el => el.classList.add("reel--fallback")));
+</script>
+<script type="module">
+// Altadata logo loader: draw (2650ms, staggered 90ms) -> crossfade to fill at 3100ms over 700ms -> hold to 5000ms -> fade out to 5600ms -> repeat.
+for (const root of document.querySelectorAll('[data-logo-loader]')) {
+  const CYCLE = 5600, DRAW = 2650, FILL_AT = 3100, FILL = 700, OUT_AT = 5000, OUT = 600;
+  const ease = v => 0.5 - 0.5 * Math.cos(Math.PI * Math.min(1, Math.max(0, v)));
+  const logo = root.querySelector('.ll-logo'), outline = root.querySelector('.ll-outline'), fill = root.querySelector('.ll-fill');
+  const toggle = root.querySelector('[data-ll-toggle]'), replay = root.querySelector('[data-ll-replay]');
+  const paths = [...root.querySelectorAll('.ll-draw')].map(p => { const len = p.getTotalLength(); p.style.strokeDasharray = len; p.style.strokeDashoffset = len; return { p, len, delay: +p.dataset.delay || 0 }; });
+  const rm = matchMedia('(prefers-reduced-motion: reduce)');
+  let t = 0, last = null, raf = 0, userPaused = false, onScreen = false, reduced = rm.matches;
+  const render = () => {
+    for (const { p, len, delay } of paths) p.style.strokeDashoffset = len * (1 - ease((t - delay) / DRAW));
+    const f = ease((t - FILL_AT) / FILL);
+    fill.setAttribute('opacity', f); outline.setAttribute('opacity', 1 - f);
+    logo.setAttribute('opacity', 1 - ease((t - OUT_AT) / OUT));
+  };
+  const showStill = () => { for (const { p } of paths) p.style.strokeDashoffset = 0; fill.setAttribute('opacity', 1); outline.setAttribute('opacity', 0); logo.setAttribute('opacity', 1); };
+  const running = () => !reduced && !userPaused && onScreen && !document.hidden;
+  const frame = now => { if (last !== null) t = (t + now - last) % CYCLE; last = now; render(); raf = running() ? requestAnimationFrame(frame) : 0; if (!raf) last = null; };
+  const sync = () => { if (running() && !raf) { last = null; raf = requestAnimationFrame(frame); } else if (!running() && raf) { cancelAnimationFrame(raf); raf = 0; last = null; } };
+  const setLabel = () => { root.classList.toggle('is-paused', userPaused); toggle.setAttribute('aria-label', userPaused ? 'Reanudar la animación del logo' : 'Pausar la animación del logo'); };
+  const applyReduced = () => { reduced = rm.matches; toggle.disabled = replay.disabled = reduced; if (reduced) { cancelAnimationFrame(raf); raf = 0; showStill(); } else render(); sync(); };
+  toggle.addEventListener('click', () => { userPaused = !userPaused; setLabel(); sync(); });
+  replay.addEventListener('click', () => { t = 0; userPaused = false; setLabel(); render(); sync(); });
+  rm.addEventListener('change', applyReduced);
+  document.addEventListener('visibilitychange', sync);
+  new IntersectionObserver(es => { onScreen = es[es.length - 1].isIntersecting; sync(); }, { threshold: 0.15 }).observe(root);
+  applyReduced();
+}
+</script>
+</body>
+</html>
