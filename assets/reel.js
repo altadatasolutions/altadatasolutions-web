@@ -111,7 +111,7 @@ export function mountReel(root) {
 
   const setDesc = () => {
     const i = ((Math.round(target) % N) + N) % N, d = data[i];
-    const txt = `Sitios web de clientes. Proyecto ${i + 1} de ${N}: ${d.name}, ${d.category}. ${d.description}`;
+    const txt = `${root.dataset.title || 'Sitios web de clientes'}. ${(root.dataset.project || 'Proyecto {i} de {n}').replace('{i}', i + 1).replace('{n}', N)}: ${d.name}, ${d.category}. ${d.description}`;
     if (canvas.getAttribute('aria-label') !== txt) { canvas.setAttribute('aria-label', txt); if (desc) desc.textContent = `${d.name}: ${d.description}`; }
   };
 
