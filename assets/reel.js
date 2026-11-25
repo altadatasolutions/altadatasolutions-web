@@ -111,25 +111,38 @@ export function mountReel(root) {
 
   const setDesc = () => {
     const i = ((Math.round(target) % N) + N) % N, d = data[i];
-    const txt = `${root.dataset.title || 'Sitios web de clientes'}. ${(root.dataset.project || 'Proyecto {i} de {n}').replace('{i}', i + 1).replace('{n}', N)}: ${d.name}, ${d.category}. ${d.description}`;
+    const txt = `${root.dataset.title || 'Sitios web de clientes'}. ${(root.dataset.project || 'Proyecto {i} de {n}').replace('{i}', i + 1).replace('{n}', N)}: ${d.name}, ${d.category}. ${d.description} ${root.dataset.open || ''}`.trim();
     if (canvas.getAttribute('aria-label') !== txt) { canvas.setAttribute('aria-label', txt); if (desc) desc.textContent = `${d.name}: ${d.description}`; }
   };
 
   const onScroll = () => { if (!dragging) { target = fromScroll(); if (reduced) phase = target; setDesc(); wake(); } };
 
   // drag: left or down advances; release settles to the nearest project
-  let dragging = false, dragId = null, sx = 0, sy = 0, startT = 0;
-  const onDown = e => { dragging = true; dragId = e.pointerId; sx = e.clientX; sy = e.clientY; startT = target; canvas.setPointerCapture(dragId); };
+  let dragging = false, dragId = null, sx = 0, sy = 0, startT = 0, moved = 0, downAt = 0;
+  const ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
+  const hitCard = (cx, cy) => { const r = canvas.getBoundingClientRect(); ndc.set(((cx - r.left) / r.width) * 2 - 1, -((cy - r.top) / r.height) * 2 + 1); ray.setFromCamera(ndc, camera); const h = ray.intersectObjects(cards.filter(c => c.mesh.visible).map(c => c.mesh), false)[0]; return h ? cards.find(c => c.mesh === h.object) : null; };
+  const openCard = c => { const d = data[c.i]; if (d && d.url) window.open(d.url, '_blank', 'noopener'); };
+  const onDown = e => { dragging = true; dragId = e.pointerId; sx = e.clientX; sy = e.clientY; startT = target; moved = 0; downAt = performance.now(); canvas.setPointerCapture(dragId); };
   const onMove = e => {
     if (!dragging || e.pointerId !== dragId) return;
-    const dx = e.clientX - sx, dy = e.clientY - sy;
+    const dx = e.clientX - sx, dy = e.clientY - sy; moved = Math.max(moved, Math.hypot(dx, dy));
     const t = startT + (-dx / (vw * 0.35)) + (e.pointerType === 'mouse' ? dy / (vh * 0.5) : 0);
     target = Math.min(N - 1, Math.max(0, t)); if (reduced) phase = target; setDesc(); wake();
   };
   const onUp = e => {
     if (!dragging || (e && e.pointerId !== dragId)) return;
     dragging = false; try { canvas.releasePointerCapture(dragId); } catch (_) {}
-    dragId = null; target = Math.round(target); scrollToPhase(target, true); setDesc();
+    dragId = null;
+    // a tap or click (no drag) on a card: the centred card opens its website, a side card is brought to the centre
+    if (e && e.type === 'pointerup' && moved < 8 && performance.now() - downAt < 500) {
+      const c = hitCard(e.clientX, e.clientY);
+      if (c) {
+        const front = ((Math.round(phase) % N) + N) % N;
+        if (c.i === front) { target = startT; openCard(c); return; }
+        target = Math.min(N - 1, Math.max(0, c.i)); scrollToPhase(target, true); setDesc(); wake(); return;
+      }
+    }
+    target = Math.round(target); scrollToPhase(target, true); setDesc();
   };
   const onKey = e => {
     let t = null;
@@ -137,6 +150,7 @@ export function mountReel(root) {
     else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') t = Math.round(target) - 1;
     else if (e.key === 'Home') t = 0;
     else if (e.key === 'End') t = N - 1;
+    else if (e.key === 'Enter') { e.preventDefault(); openCard(cards[((Math.round(target) % N) + N) % N]); return; }
     if (t === null) return;
     e.preventDefault(); target = Math.min(N - 1, Math.max(0, t)); if (reduced) phase = target; scrollToPhase(target, true); setDesc(); wake();
   };
@@ -146,6 +160,8 @@ export function mountReel(root) {
   canvas.addEventListener('pointercancel', onUp);
   canvas.addEventListener('lostpointercapture', () => { if (dragging) onUp(); });
   canvas.addEventListener('keydown', onKey);
+  const onHover = e => { if (!dragging && e.pointerType === 'mouse') canvas.style.cursor = hitCard(e.clientX, e.clientY) ? 'pointer' : ''; };
+  canvas.addEventListener('pointermove', onHover);
   addEventListener('scroll', onScroll, { passive: true });
 
   const place = () => {
