@@ -6,7 +6,7 @@
 <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)})()</script>
 <meta name="color-scheme" content="light dark">
 <title>Altadata Solutions: reparación de computadoras en Dolega, Chiriquí</title>
-<meta name="description" content="Reparación, mantenimiento y venta de computadoras, y creación de páginas web, para hogares, escuelas y pequeñas empresas de Chiriquí.">
+<meta name="description" content="Reparación, mantenimiento y venta de computadoras, videovigilancia, control de acceso, páginas web y aplicaciones a la medida para hogares, escuelas y empresas de Chiriquí.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Altadata Solutions: reparación de computadoras en Dolega, Chiriquí">
 <meta property="og:description" content="Reparación, mantenimiento y venta de computadoras en Chiriquí, con asistencia remota o en sitio.">
@@ -207,6 +207,42 @@
   html[data-theme="dark"] footer.closing { border-top: 1px solid rgb(244 236 227 / .08); }
   html[data-theme="dark"] .ll-btn { background: rgb(44 31 25 / .9); border-color: rgb(244 236 227 / .2); }
   html[data-theme="dark"] .ll-btn:hover { background: #3a2a20; }
+  /* security + custom apps cards (drawn mocks inside the panels) */
+  #mas-servicios .panel { --p-h: 280px; }
+  @media (max-width: 639px) { #mas-servicios .panel { --p-h: 290px; } }
+  .panel > .sec-mock, .panel > .app-mock { position: absolute; z-index: 2; }
+  .sec-mock { left: 50%; bottom: 0; width: min(330px, calc(100% - 32px)); transform: translateX(-50%); background: #fbfbfa; color: #1d1c17; border-radius: 12px 12px 0 0; padding: 10px; box-shadow: 0 0 0 1px rgb(38 37 30 / .1), 0 24px 50px -24px rgb(38 37 30 / .5); font: 400 12px/1.3 var(--font-text); }
+  .cams { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .cam { position: relative; aspect-ratio: 16 / 9; border-radius: 6px; overflow: hidden; background: radial-gradient(120% 90% at 30% 20%, #6b7c6a, #2f3a30 60%, #1b221c); }
+  .cam:nth-child(2) { background: radial-gradient(120% 90% at 70% 30%, #8a8f99, #3a3f48 60%, #20242b); }
+  .cam:nth-child(3) { background: radial-gradient(120% 90% at 40% 70%, #8d7a63, #3f3428 60%, #221b14); }
+  .cam:nth-child(4) { background: radial-gradient(120% 90% at 60% 40%, #7c8794, #39414c 60%, #1f252c); }
+  .cam__rec { position: absolute; left: 6px; top: 5px; display: inline-flex; align-items: center; gap: 4px; font-size: 9px; font-weight: 600; letter-spacing: .06em; color: #fff; }
+  .cam__rec i { width: 6px; height: 6px; border-radius: 50%; background: #e5484d; animation: camrec 1.4s ease-in-out infinite; }
+  .cam__name { position: absolute; left: 6px; bottom: 5px; font-size: 10px; color: rgb(255 255 255 / .85); }
+  @keyframes camrec { 50% { opacity: .25; } }
+  .gate { display: flex; align-items: center; gap: 10px; margin-top: 8px; padding: 8px 10px; border-radius: 8px; background: rgb(38 37 30 / .05); }
+  .gate__ico svg { width: 18px; height: 18px; fill: none; stroke: #c63a1f; stroke-width: 1.5; }
+  .gate__t { display: grid; flex: 1; } .gate__t b { font-weight: 600; font-size: 12px; } .gate__t span { color: #6b5a50; font-size: 11px; }
+  .gate__btn { padding: 6px 12px; border-radius: 6px; background: #c63a1f; color: #fff; font-weight: 600; font-size: 12px; }
+  .app-mock { inset: 22px 18px 0; display: flex; align-items: flex-end; justify-content: center; gap: 12px; }
+  .app-mock__desk { flex: 1; max-width: 330px; height: 92%; background: #0d1420; border-radius: 10px 10px 0 0; overflow: hidden; box-shadow: 0 24px 50px -24px rgb(0 0 0 / .6); display: flex; flex-direction: column; }
+  .app-mock__bar { display: flex; align-items: center; gap: 5px; height: 24px; padding: 0 9px; background: #162133; font: 500 10px/1 var(--font-text); color: #8fa3bf; }
+  .app-mock__bar i { width: 7px; height: 7px; border-radius: 50%; background: #2c3b53; } .app-mock__bar span { margin-left: 6px; }
+  .app-mock__scr { position: relative; flex: 1; display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 8px; padding: 10px; }
+  .globe { aspect-ratio: 1; width: 100%; max-width: 150px; border-radius: 50%; background:
+      radial-gradient(circle at 34% 40%, #f39a32 0 3px, transparent 4px), radial-gradient(circle at 62% 30%, #e5484d 0 3px, transparent 4px), radial-gradient(circle at 55% 66%, #f39a32 0 2.5px, transparent 3.5px),
+      radial-gradient(circle at 35% 30%, #3b6fa6, #183a63 55%, #0b1b33 80%); box-shadow: inset -10px -12px 24px rgb(0 0 0 / .45), 0 0 30px rgb(59 111 166 / .35); }
+  .app-mock__ev { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font: 400 10px/1.3 var(--font-text); color: #c9d6e8; }
+  .app-mock__ev .app-mock__ttl { font-weight: 600; color: #fff; font-size: 11px; margin-bottom: 2px; }
+  .app-mock__ev li:not(.app-mock__ttl) { display: flex; align-items: center; gap: 6px; padding: 4px 6px; border-radius: 5px; background: rgb(255 255 255 / .06); }
+  .app-mock__ev li i { width: 6px; height: 6px; border-radius: 50%; background: #f39a32; }
+  .app-mock__ev li:nth-child(3) i { background: #e5484d; }
+  .app-mock__phone { width: 86px; height: 78%; border-radius: 14px 14px 0 0; background: #0d1420; border: 3px solid #1f2b3d; border-bottom: 0; display: grid; place-items: center; align-content: center; gap: 8px; padding: 10px 8px; box-shadow: 0 24px 40px -20px rgb(0 0 0 / .6); }
+  .app-mock__phone span { font: 600 10px/1 var(--font-text); color: #fff; }
+  .globe--sm { max-width: 62px; }
+  @media (max-width: 639px) { .app-mock__ev { display: none; } .app-mock__scr { grid-template-columns: 1fr; justify-items: center; } }
+  @media (prefers-reduced-motion: reduce) { .cam__rec i { animation: none; } }
   .wa-link { display: inline-flex; align-items: center; gap: var(--s-2); }
   .side-visual { height: 260px; margin-top: var(--s-5); }
   @media (max-width: 639px) { .side-visual { height: 220px; } .hero__window .acts, .hero__window .d-win__bar { display: none; } }
@@ -244,6 +280,8 @@
               <p class="t-label">Para tu negocio</p>
               <a href="#servicios">Consultoría<span>Respaldo, licencias, seguridad</span></a>
               <a href="#empresas">Soporte a empresas<span>Remoto o en sitio</span></a>
+              <a href="#mas-servicios">Seguridad y acceso<span>Cámaras y cerraduras digitales</span></a>
+              <a href="#mas-servicios">Aplicaciones web<span>A la medida, para todo dispositivo</span></a>
               <a href="#web">Páginas web<span>Creación y rediseño</span></a>
             </div>
             <a class="menu-card span-3 start-10" href="#proceso">
@@ -396,6 +434,38 @@
           <p>Mantenimiento de equipos, automatización de procesos básicos y asistencia remota o presencial.</p>
           <div class="panel" data-fx="painterly-landscape" data-fx-seed="58" data-fx-params='{"drift":0}'>
             <div class="dg" data-diagram='{"layout":"hub","alt":"Altadata atiende las computadoras, la impresora, el router y el respaldo de una oficina.","center":{"label":"Altadata","icon":"ui:users"},"spokes":[{"label":"Computadoras","icon":"ui:monitor"},{"label":"Impresora","icon":"ui:file-text"},{"label":"Router","icon":"ui:globe"},{"label":"Respaldo","icon":"ui:database"},{"label":"Celulares","icon":"ui:smartphone"}]}'></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="mas-servicios" style="--hm: 2" aria-labelledby="mas-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="mas-h">Seguridad y aplicaciones a la medida. <span class="muted">Cámaras, accesos y software para tu negocio.</span></h2>
+      </div>
+      <div class="grid">
+        <article class="card card--row card--open span-6">
+          <h3>Videovigilancia y control de acceso</h3>
+          <p>Instalamos cámaras de videovigilancia y controles de acceso físicos y remotos para portones, entradas y cerraduras digitales.</p>
+          <p><a class="link" href="#contacto">Cotizar una instalación</a></p>
+          <div class="panel" data-fx="painterly-landscape" data-fx-seed="63" data-fx-params='{"drift":0}'>
+            <div class="sec-mock" role="img" aria-label="Un panel muestra cuatro cámaras grabando y el portón principal, que se abre desde el celular">
+              <div class="cams"><div class="cam"><span class="cam__rec"><i></i>REC</span><span class="cam__name">Entrada</span></div><div class="cam"><span class="cam__rec"><i></i>REC</span><span class="cam__name">Parqueo</span></div><div class="cam"><span class="cam__rec"><i></i>REC</span><span class="cam__name">Bodega</span></div><div class="cam"><span class="cam__rec"><i></i>REC</span><span class="cam__name">Oficina</span></div></div>
+              <div class="gate"><span class="gate__ico" aria-hidden="true"><svg viewBox="0 0 16 16"><rect x="3.5" y="7" width="9" height="6.5" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg></span><span class="gate__t"><b>Portón principal</b><span>Cerrado · cerradura digital</span></span><span class="gate__btn">Abrir</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="card card--row card--open span-6">
+          <h3>Aplicaciones web a la medida</h3>
+          <p>Desarrollamos aplicaciones web a la medida de tu negocio, que se adaptan a computadoras, tablets y celulares.</p>
+          <p><a class="link" href="https://earth-live-phi.vercel.app/" target="_blank" rel="noopener">Ver un ejemplo: Earth Live</a></p>
+          <div class="panel" data-fx="painterly-landscape" data-fx-seed="74" data-fx-params='{"drift":0}'>
+            <div class="app-mock" role="img" aria-label="Earth Live, una aplicación web con un globo 3D de eventos naturales, en computadora y en celular">
+              <div class="app-mock__desk"><div class="app-mock__bar"><i></i><i></i><i></i><span>earth-live</span></div><div class="app-mock__scr"><div class="globe"></div><ul class="app-mock__ev"><li class="app-mock__ttl">Earth Live · Eventos en vivo</li><li><i></i>Sismo · 4.8</li><li><i></i>Volcán · activo</li><li><i></i>Tormenta</li></ul></div></div>
+              <div class="app-mock__phone"><div class="globe globe--sm"></div><span>Earth Live</span></div>
+            </div>
           </div>
         </article>
       </div>
@@ -684,7 +754,7 @@
         <div class="span-4 stack-4">
           <a class="nav__logo" href="#top"><img class="brand-logo brand-logo--foot" src="img/altadata-logo-light.png" alt="Altadata Solutions" width="179" height="60"></a>
         </div>
-        <div class="span-2 footer__col"><h3>Servicios</h3><ul><li><a href="#servicios">Reparación</a></li><li><a href="#servicios">Equipos</a></li><li><a href="#web">Páginas web</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Servicios</h3><ul><li><a href="#servicios">Reparación</a></li><li><a href="#servicios">Equipos</a></li><li><a href="#web">Páginas web</a></li><li><a href="#mas-servicios">Seguridad</a></li><li><a href="#mas-servicios">Aplicaciones</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Proceso</h3><ul><li><a href="#proceso">Diagnóstico</a></li><li><a href="#proceso">Informe</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Empresa</h3><ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#faq">Preguntas</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Contacto</h3><ul><li><a href="#contacto">Formulario</a></li><li><a target="_blank" href="https://wa.me/50764824577" rel="noopener">WhatsApp</a></li><li><a target="_blank" href="https://www.instagram.com/altadatasolutions/" rel="noopener">Instagram</a></li><li><a target="_blank" href="https://www.facebook.com/people/Altadata-Solutions/61576147513983/" rel="noopener">Facebook</a></li></ul></div>
