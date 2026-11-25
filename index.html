@@ -252,6 +252,24 @@
   .wa-link { display: inline-flex; align-items: center; gap: var(--s-2); }
   .side-visual { height: 260px; margin-top: var(--s-5); }
   @media (max-width: 639px) { .side-visual { height: 220px; } .hero__window .acts, .hero__window .d-win__bar { display: none; } }
+  /* ritmo uniforme: cada sección mide lo que su contenido, con el mismo espacio arriba y abajo */
+  main > section.section:not(#proceso) { height: auto; min-height: 0; display: block; }
+  main > section.section:not(#proceso) > .wrap { height: auto; }
+  main > section.section:not(#proceso) > .wrap > .fill { flex: none; }
+  main > section.section.g2:not(#proceso) > .wrap { display: flex; flex-direction: column; row-gap: var(--s-8); }
+  main > section.section.g2:not(#proceso) > .wrap > :last-child { margin-block: 0; }
+  /* Proceso: sin pantalla mínima en reposo; fijo arriba (no centrado) cuando está en vivo */
+  main > #proceso:not(.is-live) { min-height: 0; }
+  main #proceso[data-moment].is-live > .mo-pc__grid { padding-top: calc(var(--padt) + var(--s-6)); align-content: start; }
+  /* laptop pequeña (1024-1279): el menú, el tema, el idioma y el botón caben sin encimarse */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .nav__bar { gap: var(--s-4); }
+    .nav__links { flex: 1 0 auto; }
+    .nav__link { font-size: 14px; padding: 0 6px; }
+    .nav__link::before, .nav__link[aria-current="page"]::after { left: 6px; right: 6px; }
+    .lang-switch { margin-right: var(--s-2); }
+    .nav__actions .btn { padding-inline: var(--s-4); }
+  }
   footer.closing { height: auto; min-height: 0; }
   footer.closing .closing__cta { padding-bottom: var(--s-8); }
   #empresas .rows { margin-top: var(--s-6); }
@@ -845,6 +863,23 @@ for (const root of document.querySelectorAll('[data-logo-loader]')) {
     apply(t);
   });
   mq.addEventListener('change', e => { const s = saved(); if (s !== 'light' && s !== 'dark') apply(e.matches ? 'dark' : 'light'); });
+})();
+</script>
+<script>
+/* Proceso en vivo: recorta el vacío bajo su contenido fijo para que el hueco con la sección siguiente sea el de todas */
+(() => {
+  const pc = document.getElementById('proceso'); if (!pc) return;
+  const fit = () => {
+    if (!pc.classList.contains('is-live')) { pc.style.marginBottom = ''; return; }
+    const g = pc.querySelector('.mo-pc__grid'); if (!g) return;
+    const vis = pc.querySelector('.mo-pc__visuals'), txt = pc.querySelector('.mo-pc__text');
+    const end = Math.max(vis ? vis.getBoundingClientRect().bottom : 0, txt ? txt.getBoundingClientRect().bottom : 0);
+    const pb = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--padb')) || 72;
+    const empty = g.getBoundingClientRect().bottom - end;
+    pc.style.marginBottom = -Math.max(0, Math.round(empty - pb)) + 'px';
+  };
+  new MutationObserver(fit).observe(pc, { attributes: true, attributeFilter: ['class'] });
+  addEventListener('resize', fit); addEventListener('load', fit); fit();
 })();
 </script>
 </body>
