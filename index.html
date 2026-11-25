@@ -209,6 +209,8 @@
   html[data-theme="dark"] .ll-btn:hover { background: #3a2a20; }
   /* security + custom apps cards (drawn mocks inside the panels) */
   #mas-servicios .panel { --p-h: 280px; }
+  #mas-servicios .card { display: flex; flex-direction: column; }
+  #mas-servicios .card > .panel { margin-top: auto; flex: none; height: var(--p-h); }
   @media (max-width: 639px) { #mas-servicios .panel { --p-h: 290px; } }
   .panel > .sec-mock, .panel > .app-mock { position: absolute; z-index: 2; }
   .sec-mock { left: 50%; bottom: 0; width: min(330px, calc(100% - 32px)); transform: translateX(-50%); background: #fbfbfa; color: #1d1c17; border-radius: 12px 12px 0 0; padding: 10px; box-shadow: 0 0 0 1px rgb(38 37 30 / .1), 0 24px 50px -24px rgb(38 37 30 / .5); font: 400 12px/1.3 var(--font-text); }
