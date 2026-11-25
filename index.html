@@ -243,6 +243,10 @@
   .app-mock__phone { width: 86px; height: 78%; border-radius: 14px 14px 0 0; background: #0d1420; border: 3px solid #1f2b3d; border-bottom: 0; display: grid; place-items: center; align-content: center; gap: 8px; padding: 10px 8px; box-shadow: 0 24px 40px -20px rgb(0 0 0 / .6); }
   .app-mock__phone span { font: 600 10px/1 var(--font-text); color: #fff; }
   .globe--sm { max-width: 62px; }
+  .app-mock__desk { max-width: 400px; }
+  .app-mock__desk > .app-mock__shot { display: block; width: 100%; flex: 1; min-height: 0; object-fit: cover; object-position: left top; }
+  .app-mock__phone { padding: 6px 4px 10px; align-content: start; }
+  .app-mock__phone > .app-mock__shot { width: 100%; aspect-ratio: 9 / 13; object-fit: cover; border-radius: 8px; }
   @media (max-width: 639px) { .app-mock__ev { display: none; } .app-mock__scr { grid-template-columns: 1fr; justify-items: center; } }
   @media (prefers-reduced-motion: reduce) { .cam__rec i { animation: none; } }
   .wa-link { display: inline-flex; align-items: center; gap: var(--s-2); }
@@ -465,8 +469,8 @@
           <p><a class="link" href="https://earth-live-phi.vercel.app/" target="_blank" rel="noopener">Ver un ejemplo: Earth Live</a></p>
           <div class="panel" data-fx="painterly-landscape" data-fx-seed="74" data-fx-params='{"drift":0}'>
             <div class="app-mock" role="img" aria-label="Earth Live, una aplicación web con un globo 3D de eventos naturales, en computadora y en celular">
-              <div class="app-mock__desk"><div class="app-mock__bar"><i></i><i></i><i></i><span>earth-live</span></div><div class="app-mock__scr"><div class="globe"></div><ul class="app-mock__ev"><li class="app-mock__ttl">Earth Live · Eventos en vivo</li><li><i></i>Sismo · 4.8</li><li><i></i>Volcán · activo</li><li><i></i>Tormenta</li></ul></div></div>
-              <div class="app-mock__phone"><div class="globe globe--sm"></div><span>Earth Live</span></div>
+              <div class="app-mock__desk"><div class="app-mock__bar"><i></i><i></i><i></i><span>earth-live-phi.vercel.app</span></div><img class="app-mock__shot" src="img/apps/earth-live.jpg" alt="Captura de Earth Live: un globo 3D con terremotos, incendios y tormentas en vivo" width="1200" height="575" loading="lazy"></div>
+              <div class="app-mock__phone"><img class="app-mock__shot" src="img/apps/earth-live-globo.jpg" alt="" width="420" height="401" loading="lazy"><span>Earth Live</span></div>
             </div>
           </div>
         </article>
