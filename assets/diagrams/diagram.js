@@ -1116,7 +1116,7 @@ class Diagram {
   // keeps this one moving)
   get still() {
     const m = this.spec.motion || {};
-    const phone = phoneMQ.matches && !(this.spec.phoneLoop || this.el.closest('[data-dg-phone="loop"]'));
+    const phone = phoneMQ.matches && !(this.spec.phoneLoop || this.el.closest('[data-dg-phone="loop"]') || document.documentElement.hasAttribute('data-phone-motion'));
     return reducedMQ.matches || kindOther() || m.pulse === 'none' || phone || (this.heldByPage && !this.hoverPlay);
   }
   // held by hand: data-dg-still on the element or around it (a diagram card's pulse is its own loop, so data-ui-still,
